@@ -62,7 +62,12 @@ export const Contact = () => {
                   <Mail className="h-6 w-6 text-primary" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">maski.yashasv@example.com</p>
+                    <a 
+                      href="mailto:yashasvmaski05@gmail.com" 
+                      className="text-primary hover:text-primary/80 transition-colors duration-300"
+                    >
+                      yashasvmaski05@gmail.com
+                    </a>
                   </div>
                 </div>
                 
@@ -70,7 +75,22 @@ export const Contact = () => {
                   <Phone className="h-6 w-6 text-primary" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-muted-foreground">+91 XXX XXX XXXX</p>
+                    <a 
+                      href="tel:+918073023040" 
+                      className="text-primary hover:text-primary/80 transition-colors duration-300"
+                    >
+                      +91 80730 23040
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 p-4 bg-primary/5 rounded-lg border border-primary/20">
+                  <div className="h-6 w-6 text-primary flex items-center justify-center">
+                    📍
+                  </div>
+                  <div>
+                    <p className="font-medium">Location</p>
+                    <p className="text-muted-foreground">Ballari, India</p>
                   </div>
                 </div>
 
@@ -84,7 +104,7 @@ export const Contact = () => {
                       className="border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
                       asChild
                     >
-                      <a href="https://linkedin.com/in/maski-yashasv" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/maski-yashv" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
@@ -95,7 +115,7 @@ export const Contact = () => {
                       className="border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
                       asChild
                     >
-                      <a href="https://github.com/maski-yashasv" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/yaasshx" target="_blank" rel="noopener noreferrer">
                         <Github className="h-5 w-5" />
                       </a>
                     </Button>
