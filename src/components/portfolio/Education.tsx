@@ -71,7 +71,7 @@ export const Education = () => {
               <CardContent>
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-foreground">
-                    CGPA: <span className="text-primary">{edu.grade}</span>
+                    Grade: <span className="text-primary">{edu.grade}</span>
                   </span>
                 </div>
               </CardContent>
