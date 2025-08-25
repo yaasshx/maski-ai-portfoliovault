@@ -39,8 +39,8 @@ export const Navigation = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="w-full px-4 py-4">
+        <div className="flex items-center justify-between w-full">
           {/* Logo */}
           <Button
             variant="ghost"
