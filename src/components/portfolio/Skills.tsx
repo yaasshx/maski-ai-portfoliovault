@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 export const Skills = () => {
   const technicalSkills = [
-    "C", "C++", "Python", "HTML & CSS (Beginner)", "JavaScript (Beginner)",
+    "C", "C++", "Python", "HTML & CSS (Beginner)",
     "Data Structures and Algorithms", "Object-Oriented Programming"
   ];
 
