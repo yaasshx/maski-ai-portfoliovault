@@ -20,7 +20,7 @@ export const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
       </div>
       
       {/* Animated Background Elements */}
@@ -32,17 +32,17 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <div className="animate-fade-in enhanced-contrast">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gradient text-shadow-light">
+        <div className="animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gradient">
             Maski Yashasv
           </h1>
-          <h2 className="text-xl md:text-2xl text-foreground mb-6 font-semibold text-shadow-light">
+          <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-medium">
             Artificial Intelligence & Machine Learning Student
           </h2>
           
           {/* Animated typing text */}
           <div className="h-16 flex items-center justify-center mb-8">
-            <p className="text-lg md:text-xl animate-typing max-w-full text-foreground font-medium text-shadow-light">
+            <p className="text-lg md:text-xl animate-typing max-w-full">
               Passionate about solving real-world problems with technology
             </p>
           </div>
