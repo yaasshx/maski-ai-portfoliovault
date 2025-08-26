@@ -4,29 +4,12 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
   const handleDownloadResume = () => {
-    try {
-      // Direct download link from Google Drive
-      const resumeUrl =
-        "https://drive.google.com/uc?export=download&id=1UVHPWigMXBXltR39Lpa8PjF7dpJIFaWE";
+    // Direct download link from Google Drive
+    const resumeUrl =
+      "https://drive.google.com/uc?export=download&id=1UVHPWigMXBXltR39Lpa8PjF7dpJIFaWE";
 
-      const link = document.createElement("a");
-      link.href = resumeUrl;
-      link.download = "Maski_Yashasv_Resume.pdf"; // Suggested filename
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      // Fallback: open in new tab if download is blocked
-      setTimeout(() => {
-        window.open(resumeUrl, "_blank");
-      }, 1000);
-    } catch (error) {
-      console.error("Resume download failed:", error);
-      window.open(
-        "https://drive.google.com/file/d/1UVHPWigMXBXltR39Lpa8PjF7dpJIFaWE/view?usp=sharing",
-        "_blank"
-      );
-    }
+    // Open in new tab (Google will force download automatically)
+    window.open(resumeUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
