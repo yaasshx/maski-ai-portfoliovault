@@ -19,9 +19,7 @@ export const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
-      </div>
+      ></div>
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
