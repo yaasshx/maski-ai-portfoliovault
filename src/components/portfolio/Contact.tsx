@@ -104,7 +104,7 @@ export const Contact = () => {
                       className="border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
                       asChild
                     >
-                      <a href="https://www.linkedin.com/in/maski-yashv" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/maskiyashasv0107" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
