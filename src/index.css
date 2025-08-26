@@ -2,50 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Maski Yashasv Portfolio Design System - Dark Theme with Cyan Accents */
+/* Maski Yashasv Portfolio Design System - Professional Blue Theme */
 
 @layer base {
   :root {
-    /* Portfolio Color System */
-    --background: 213 30% 7%;           /* #0D1117 - Deep Black-Blue */
-    --foreground: 213 14% 83%;          /* #C9D1D9 - Soft White */
+    /* Professional Blue Color System */
+    --background: 212 20% 96%;          /* #F1F5F9 - Light Cool Gray */
+    --foreground: 215 25% 15%;          /* #111827 - Dark Neutral */
 
-    --card: 213 19% 12%;                /* #161B22 - Steel Gray */
-    --card-foreground: 213 14% 83%;     /* #C9D1D9 - Soft White */
+    --card: 0 0% 100%;                  /* #FFFFFF - Pure White */
+    --card-foreground: 215 25% 15%;     /* #111827 - Dark Neutral */
 
-    --popover: 213 19% 12%;
-    --popover-foreground: 213 14% 83%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 212 100% 67%;            /* #58A6FF - Cyan Blue */
-    --primary-foreground: 213 30% 7%;
+    --primary: 216 33% 17%;             /* #1E293B - Dark Charcoal Blue */
+    --primary-foreground: 0 0% 98%;     /* #FAFAFA - Near White */
 
-    --secondary: 213 19% 12%;           /* #161B22 - Steel Gray */
-    --secondary-foreground: 213 14% 83%;
+    --secondary: 216 21% 39%;           /* #475569 - Slate Gray */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 213 19% 16%;
-    --muted-foreground: 213 14% 63%;
+    --muted: 212 20% 92%;               /* #E2E8F0 - Light Muted */
+    --muted-foreground: 216 21% 39%;
 
-    --accent: 212 100% 67%;             /* #58A6FF - Cyan Blue */
-    --accent-foreground: 213 30% 7%;
+    --accent: 221 83% 53%;              /* #2563EB - Professional Blue */
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 213 14% 83%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 213 19% 20%;
-    --input: 213 19% 16%;
-    --ring: 212 100% 67%;
+    --border: 212 20% 88%;              /* #CBD5E1 - Light Border */
+    --input: 212 20% 92%;
+    --ring: 221 83% 53%;
 
     --radius: 0.75rem;
 
-    /* Portfolio Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(212 100% 77%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(213 19% 12%));
-    --gradient-card: linear-gradient(145deg, hsl(213 19% 12%), hsl(213 19% 16%));
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(212 20% 92%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(212 20% 96%));
 
-    /* Shadows with Cyan Glow */
-    --shadow-glow: 0 0 50px hsl(var(--primary) / 0.3);
-    --shadow-card: 0 8px 32px hsl(213 30% 4% / 0.5);
-    --shadow-elegant: 0 20px 60px hsl(213 30% 4% / 0.4);
+    /* Professional Shadows */
+    --shadow-glow: 0 0 30px hsl(var(--accent) / 0.2);
+    --shadow-card: 0 4px 20px hsl(215 25% 15% / 0.1);
+    --shadow-elegant: 0 10px 40px hsl(215 25% 15% / 0.08);
 
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,11 +76,11 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary/30 rounded-full;
+    @apply bg-accent/30 rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary/50;
+    @apply bg-accent/50;
   }
 }
 
@@ -94,9 +94,9 @@
   }
 
   .glass-effect {
-    background: rgba(22, 27, 34, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(88, 166, 255, 0.1);
+    border: 1px solid hsl(var(--accent) / 0.1);
   }
 
   .glow-effect {
@@ -114,7 +114,7 @@
 
   .animate-typing {
     overflow: hidden;
-    border-right: 0.15em solid hsl(var(--primary));
+    border-right: 0.15em solid hsl(var(--accent));
     white-space: nowrap;
     animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
   }
@@ -148,7 +148,7 @@
 
   @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: hsl(var(--primary)); }
+    50% { border-color: hsl(var(--accent)); }
   }
 
   @keyframes float {
