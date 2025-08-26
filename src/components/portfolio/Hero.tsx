@@ -4,30 +4,52 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
   const handleDownloadResume = () => {
-    // Create a temporary link for downloading resume
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // This would be the actual resume file path
-    link.download = 'Maski_Yashasv_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      // Direct download link from Google Drive
+      const resumeUrl =
+        "https://drive.google.com/uc?export=download&id=1UVHPWigMXBXltR39Lpa8PjF7dpJIFaWE";
+
+      const link = document.createElement("a");
+      link.href = resumeUrl;
+      link.download = "Maski_Yashasv_Resume.pdf"; // Suggested filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Fallback: open in new tab if download is blocked
+      setTimeout(() => {
+        window.open(resumeUrl, "_blank");
+      }, 1000);
+    } catch (error) {
+      console.error("Resume download failed:", error);
+      window.open(
+        "https://drive.google.com/file/d/1UVHPWigMXBXltR39Lpa8PjF7dpJIFaWE/view?usp=sharing",
+        "_blank"
+      );
+    }
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
       </div>
-      
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-float"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/60 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-primary/40 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+        <div
+          className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/60 rounded-full animate-float"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-primary/40 rounded-full animate-float"
+          style={{ animationDelay: "4s" }}
+        ></div>
       </div>
 
       {/* Content */}
@@ -39,7 +61,7 @@ export const Hero = () => {
           <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-medium">
             Artificial Intelligence & Machine Learning Student
           </h2>
-          
+
           {/* Animated typing text */}
           <div className="h-16 flex items-center justify-center mb-8">
             <p className="text-lg md:text-xl animate-typing max-w-full">
@@ -47,7 +69,8 @@ export const Hero = () => {
             </p>
           </div>
 
-          <Button 
+          {/* Download Button */}
+          <Button
             onClick={handleDownloadResume}
             className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:glow-effect group"
           >
