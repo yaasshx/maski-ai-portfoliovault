@@ -25,10 +25,10 @@ export const Skills = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Technical Skills */}
-          <Card className="glass-effect border-primary/20 hover:border-primary/40 transition-all duration-300 animate-slide-up group">
-            <CardHeader>
-              <CardTitle className="flex items-center text-2xl font-bold">
-                <Code className="h-6 w-6 text-primary mr-3 group-hover:animate-pulse" />
+          <Card className="glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-slide-up group hover:shadow-2xl">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center text-2xl font-bold text-foreground">
+                <Code className="h-7 w-7 text-primary mr-3 group-hover:animate-pulse" />
                 Technical Skills
               </CardTitle>
             </CardHeader>
@@ -38,7 +38,7 @@ export const Skills = () => {
                   <Badge 
                     key={index} 
                     variant="secondary" 
-                    className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 hover:scale-105 transition-all duration-300"
+                    className="px-4 py-3 text-sm font-semibold bg-primary/15 text-primary border-2 border-primary/30 hover:bg-primary/25 hover:scale-105 transition-all duration-300 shadow-sm"
                   >
                     {skill}
                   </Badge>
@@ -48,10 +48,10 @@ export const Skills = () => {
           </Card>
 
           {/* Soft Skills */}
-          <Card className="glass-effect border-primary/20 hover:border-primary/40 transition-all duration-300 animate-slide-up group" style={{ animationDelay: '0.2s' }}>
-            <CardHeader>
-              <CardTitle className="flex items-center text-2xl font-bold">
-                <Users className="h-6 w-6 text-primary mr-3 group-hover:animate-pulse" />
+          <Card className="glass-effect border-primary/30 hover:border-primary/50 transition-all duration-300 animate-slide-up group hover:shadow-2xl" style={{ animationDelay: '0.2s' }}>
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center text-2xl font-bold text-foreground">
+                <Users className="h-7 w-7 text-primary mr-3 group-hover:animate-pulse" />
                 Soft Skills
               </CardTitle>
             </CardHeader>
@@ -61,7 +61,7 @@ export const Skills = () => {
                   <Badge 
                     key={index} 
                     variant="secondary" 
-                    className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 hover:scale-105 transition-all duration-300"
+                    className="px-4 py-3 text-sm font-semibold bg-primary/15 text-primary border-2 border-primary/30 hover:bg-primary/25 hover:scale-105 transition-all duration-300 shadow-sm"
                   >
                     {skill}
                   </Badge>

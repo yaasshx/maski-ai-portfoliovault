@@ -32,17 +32,17 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gradient">
+        <div className="animate-fade-in enhanced-contrast">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gradient text-shadow-light">
             Maski Yashasv
           </h1>
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-medium">
+          <h2 className="text-xl md:text-2xl text-foreground mb-6 font-semibold text-shadow-light">
             Artificial Intelligence & Machine Learning Student
           </h2>
           
           {/* Animated typing text */}
           <div className="h-16 flex items-center justify-center mb-8">
-            <p className="text-lg md:text-xl animate-typing max-w-full">
+            <p className="text-lg md:text-xl animate-typing max-w-full text-foreground font-medium text-shadow-light">
               Passionate about solving real-world problems with technology
             </p>
           </div>

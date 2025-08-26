@@ -80,7 +80,7 @@ export const Navigation = () => {
           <Button
             variant="ghost"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-xl font-bold text-primary hover:bg-transparent hover:text-primary/80 p-0"
+            className="text-xl font-extrabold text-primary hover:bg-primary/10 hover:text-primary p-2 rounded-lg text-shadow-light"
             aria-label="Go to top"
           >
             MY
@@ -93,10 +93,10 @@ export const Navigation = () => {
                 key={item.name}
                 variant="ghost"
                 onClick={() => scrollToSection(item.href)}
-                className={`transition-all duration-300 hover:bg-transparent ${
+                className={`transition-all duration-300 font-medium px-3 py-2 rounded-lg ${
                   activeSection === item.href.substring(1)
-                    ? "text-accent font-semibold border-b-2 border-accent rounded-none"
-                    : "text-foreground hover:text-accent"
+                    ? "text-accent font-bold bg-accent/10 border-2 border-accent/30 nav-highlight text-shadow-light"
+                    : "text-foreground hover:text-accent hover:bg-accent/5 text-shadow-light"
                 }`}
                 role="tab"
                 aria-selected={activeSection === item.href.substring(1)}
@@ -132,10 +132,10 @@ export const Navigation = () => {
                   key={item.name}
                   variant="ghost"
                   onClick={() => scrollToSection(item.href)}
-                  className={`justify-start transition-all duration-300 ${
+                  className={`justify-start transition-all duration-300 font-medium ${
                     activeSection === item.href.substring(1)
-                      ? "text-accent font-semibold bg-accent/10 border-l-4 border-accent"
-                      : "text-foreground hover:text-accent hover:bg-accent/10"
+                      ? "text-accent font-bold bg-accent/15 border-l-4 border-accent text-shadow-light"
+                      : "text-foreground hover:text-accent hover:bg-accent/10 text-shadow-light"
                   }`}
                   role="tab"
                   aria-selected={activeSection === item.href.substring(1)}
